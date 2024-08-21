@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+
+  <body class="back-light">
+    <div class="navNavbar">
+
+      <a class="navNavItem navActive" href="index.html">Home</a>
+
+      <div class="navNavGroup checkDisplay">
+        <a class="navNavItem" href="skills.html">Skills</a>
+        <a class="navNavItem" href="about.html">About</a>
+        <a class="navNavItem" href="extras.html">Projects</a>
+      </div>
+
+      <a class="navHide navHamBurger"><i class="fa fa-bars"></i></a>
+    </div>
+
+    <div class="flex-grid-row back-lightblue text-black margin-zero">
+      <div class="flex-size-one padding-five">
+        <h1 class="font-ml">Hi.<br>I'm Lily Palmer.<br>Welcome to my Portfolio.</h1>
+        <p class="font-xs">I'm a Neurodivergent Software Developer with over 5 years of experience in developing and delivering easy to use software. My goal is to create efficient, scalable, and user-friendly applications that solve real-world problems on a global scale.</p>
+        <a class="button-normal-black text-light font-xxs font-semibold" id="rounded" onclick="scrollToElement('#moreInfo')">Learn More</a>
+      </div>
+      <div class="flex-size-one padding-five">
+        <div class="back-light border-radius" style="min-height: 100%;">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="box-normal padding-five" id="moreInfo">
+      <h1 class="font-m align-center margin-five-t">Skills & Achievements</h1>
+      <p class="font-xs margin-five">The following is a detailed breakdown of my proficiency across the various programming languages I have learned. The accompanying pie chart visually represents my relative expertise in each language, offering a comparative overview of my skill set. I've assigned them a value of 1-100 relative to current proficiency. These numbers are expected to increase over time.</p>
+      
+      <p class="font-xs font-bold align-center border-radius"><span class="sideBorder" style="border-color: #F0DB4F !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> JavaScript <span class="sideBorder" style="border-color: #5382a1 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Java <span class="sideBorder" style="border-color: #646464 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Python <span class="sideBorder" style="border-color: #453a62 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Haskell <span class="sideBorder" style="border-color: #286ed7 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> CSS / HTML <span class="sideBorder" style="border-color: #682876 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> C#</p>
+      <div class="box-normal flex-center">
+        <canvas id="chartValues" style="width:100%;max-width: 50rem;">
+        </canvas>
+      </div>
+
+
+    </div>
+
+    <div class="box-normal-flattop back-transparent">
+      <div class="box-normal margin-five-b sideBorder">
+        <p>"This is a generic quote about how great this person is. I think they work very hard and I would wholeheartedly recommend them. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore voluptas magnam accusamus qui molestias numquam alias repellendus, nisi nemo laboriosam fugiat non ut! Maiores ab natus quas optio! Laborum."<br><br><span class="font-semibold">Employee, XYZ Company</span></p>
+      </div>
+      <div class="box-normal margin-five-b sideBorder">
+        <p>"This is a generic quote about how great this person is. I think they work very hard and I would wholeheartedly recommend them. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore voluptas magnam accusamus qui molestias numquam alias repellendus, nisi nemo laboriosam fugiat non ut! Maiores ab natus quas optio! Laborum."<br><br><span class="font-semibold">Employee, XYZ Company</span></p>
+      </div>
+      <div class="box-normal sideBorder">
+        <p>"This is a generic quote about how great this person is. I think they work very hard and I would wholeheartedly recommend them. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore voluptas magnam accusamus qui molestias numquam alias repellendus, nisi nemo laboriosam fugiat non ut! Maiores ab natus quas optio! Laborum."<br><br><span class="font-semibold">Employee, XYZ Company</span></p>
+      </div>
+    </div>
+
+    <div class="footerContainer">
+      <hr class="back-dark">
+      <div class="footerItems">
+        <p class="textButton text-dark" onclick="showSources()">Sources</p>
+        <p class="textButton text-dark" onclick="backToTop()">Back to Top</p>
+        <p class="text-dark">© Lily Palmer 2024</p>
+      </div>
+      <div id="sources" class="align-left sources">
+        <a class="textButton text-dark" href="https://api.jquery.com/">jQuery</a>
+        <p></p>
+        <a class="textButton text-dark padding-five-b" href="https://getbootstrap.com/">Bootstrap</a>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scriptindex.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Aperture Innovations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylewordle.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+
+  <body class="back-dark">
+
+    <div class="navNavbar">
+      <div class="navNavGroup checkDisplay">
+        <a class="navNavItem" href="index.html">Home</a>
+        <a class="navNavItem" href="skills.html">Skills</a>
+        <a class="navNavItem" href="about.html">About</a>
+      </div>
+
+      <a class="navNavItem navActive" href="extras.html">Projects</a>
+
+      <a class="navHide navHamBurger"><i class="fa fa-bars"></i></a>
+    </div>
+    <div class="box-normal-flattop margin-zero back-purpleblack-gradient">
+      <div class="box-normal margin-five-l margin-five-r align-center back-transparent border-radius text-light">
+        <h1 class="align-left">Wordle</h1>
+        <hr class="back-light">
+        <div class="align-left">
+
+          <h3>Why Recreate Wordle?</h3>
+          <p>Wordle was a popular online word puzzle game that became a viral sensation in late 2021 and early 2022. It was a simple word guessing game where the objective was to guess a five-letter word within six attempts. Each day, there was a new word to guess, and the same word was used by all players worldwide. I saw this during the hight of the pandemic and decided to create a spin-off version that used random words every time the site was launched, and allowed for new and unique games for every player. In theory, an 'infinite' wordle, unlike the once-per-day format. I often enjoyed playing and so it was my belief that an infinite version would do quite well.</p>
+          <h3>How was the game played?</h3>
+          <ol>
+            <li><p><span class="font-bold">Guess the word:</span> The players would start by entering any five-letter word into the game. My version is slightly different, as it allows any five characters, but it would of been trivial to change.</p></li>
+            <li><p><span class="font-bold">Coloured Feedback System:</span></p>
+              <ul>
+                <li>
+                  <p><span class="font-bold">Green:</span> If a letter was both correct and in the correct position, it would be highlighted green!</p>
+                </li>
+                <li>
+                  <p><span class="font-bold">Amber:</span> If a letter was correct but in the WRONG position, it would be amber to indicate as such.</p>
+                </li>
+                <li>
+                  <p><span class="font-bold">Red:</span> This meant that the letter was not present in the word in any form.</p>
+                </li>
+              </ul>
+            </li>
+            <li><p><span class="font-bold">Refine Your Guesses:</span> Based on the feedback, players made new guesses. They had up to six tries to guess the correct word.</p></li>
+            <li><p><span class="font-bold">Win / Loss Conditions:</span> If a player guessed the word correctly within the six tries, they won. If they failed to guess the word, the correct word was revealed at the end. In my game, it then gives an option to restart with a brand new word.</p></li>
+          </ol>
+          <h3>The Popularity Spike</h3>
+          <p>Since during the time was near the hight of the pandemic, simple but fun games like this were the key to people's dopamine hits. The ability of wordle's daily sharing function and competing with friends partnered with everybody being stuck inside at the time lead to a boom in popularity. It was easy to pick up, but hard to master. Whilst in this version, the charm of having a new daily word is lost, the benefits of having repeated instant hits of dopamine made me believe that it was worth the trade off. It was also a fun challenge as at the time i set a strict time limit of a day to complete it! It was tough but fun to recreate Josh Wardle's Pride and joy.</p>
+          <h3>Origins</h3>
+          <p>As Previously Mentioned, Wordle was created by Josh Wardle, a software engineer as a fun game for both them and their partner. It was later released to the public, and gained mass popularity. Later, in Mid January of 2022, The New York Times purchased Wordle and integrated it into it's selection of word-based games.</p>
+        </div>
+        <div class="box-normal align-left back-dark text-light border-radius margin-zero margin-five-b padding-zero-b" id="codeBlock">
+          <a class="align-left margin-one-l padding-one-l sticky-top button-normal-blue text-light" href="wordle.html" download="wordle.html">wordle.html</a>
+          <pre class="margin-zero padding-zero">
+            <code class="text-light margin-zero padding-zero-b">
+              <span id="codeHighlight">&lt;div class="</span>box-normal margin-one align-center<span id="codeHighlight">"&gt;</span>
+                <span id="codeHighlight">&lt;h1 class="wordleTitle"&gt;</span>Wordle<span id="codeHighlight">&lt;/h1&gt;</span>
+              <span id="codeHighlight">&lt;/div&gt;</span>
+
+              <span id="codeHighlight">&lt;div class="</span>box-normal margin-ten align-center flex-grid-row<span id="codeHighlight">"&gt;</span>
+                <span id="codeHighlight">&lt;div class="</span>flex-size-one flex-center<span id="codeHighlight">"&gt;</span>
+                  <span id="codeHighlight">&lt;table class="</span>wordGrid<span id="codeHighlight">"&gt;</span>
+                    <span id="codeHighlight">&lt;tr&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                    <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;tr&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                    <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;tr&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                    <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;tr&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                    <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;tr&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                    <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;tr&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;td&gt;&lt;/td&gt;</span>
+                    <span id="codeHighlight">&lt;/tr&gt;</span>
+                  <span id="codeHighlight">&lt;/table&gt;</span>
+
+                <span id="codeHighlight">&lt;/div&gt;</span>
+              <span id="codeHighlight">&lt;/div&gt;</span>
+
+              <span id="codeHighlight">&lt;div id="</span>keyboardBox<span id="codeHighlight">" class="</span>box-normal margin-ten-l margin-ten-r align-center<span id="codeHighlight">"&gt;</span>
+                <span id="codeHighlight">&lt;div class="</span>flex-center<span id="codeHighlight">"&gt;</span>
+                  <span id="codeHighlight">&lt;div class="</span>flex-size-one flex-center<span id="codeHighlight">"&gt;</span>
+                    <span id="codeHighlight">&lt;table class="</span>keyboardGrid kgAlpha<span id="codeHighlight">"&gt;</span>
+                      <span id="codeHighlight">&lt;tr&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterQ<span id="codeHighlight">" onclick="</span>addLetter('Q')<span id="codeHighlight">"&gt;</span>Q<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterW<span id="codeHighlight">" onclick="</span>addLetter('W')<span id="codeHighlight">"&gt;</span>W<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterE<span id="codeHighlight">" onclick="</span>addLetter('E')<span id="codeHighlight">"&gt;</span>E<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterR<span id="codeHighlight">" onclick="</span>addLetter('R')<span id="codeHighlight">"&gt;</span>R<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterT<span id="codeHighlight">" onclick="</span>addLetter('T')<span id="codeHighlight">"&gt;</span>T<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterY<span id="codeHighlight">" onclick="</span>addLetter('Y')<span id="codeHighlight">"&gt;</span>Y<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterU<span id="codeHighlight">" onclick="</span>addLetter('U')<span id="codeHighlight">"&gt;</span>U<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterI<span id="codeHighlight">" onclick="</span>addLetter('I')<span id="codeHighlight">"&gt;</span>I<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterO<span id="codeHighlight">" onclick="</span>addLetter('O')<span id="codeHighlight">"&gt;</span>O<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterP<span id="codeHighlight">" onclick="</span>addLetter('P')<span id="codeHighlight">"&gt;</span>P<span id="codeHighlight">&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;/table&gt;</span>
+                  <span id="codeHighlight">&lt;/div&gt;</span>
+                <span id="codeHighlight">&lt;/div&gt;</span>
+                <span id="codeHighlight">&lt;div class="</span>flex-center<span id="codeHighlight">"&gt;</span>
+                  <span id="codeHighlight">&lt;div class="</span>flex-size-one flex-center<span id="codeHighlight">"&gt;</span>
+                    <span id="codeHighlight">&lt;table class="</span>keyboardGrid kgBeta<span id="codeHighlight">"&gt;</span>
+                      <span id="codeHighlight">&lt;tr&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterA<span id="codeHighlight">" onclick="</span>addLetter('A')<span id="codeHighlight">"&gt;</span>A<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterS<span id="codeHighlight">" onclick="</span>addLetter('S')<span id="codeHighlight">"&gt;</span>S<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterD<span id="codeHighlight">" onclick="</span>addLetter('D')<span id="codeHighlight">"&gt;</span>D<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterF<span id="codeHighlight">" onclick="</span>addLetter('F')<span id="codeHighlight">"&gt;</span>F<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterG<span id="codeHighlight">" onclick="</span>addLetter('G')<span id="codeHighlight">"&gt;</span>G<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterH<span id="codeHighlight">" onclick="</span>addLetter('H')<span id="codeHighlight">"&gt;</span>H<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterJ<span id="codeHighlight">" onclick="</span>addLetter('J')<span id="codeHighlight">"&gt;</span>J<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterK<span id="codeHighlight">" onclick="</span>addLetter('K')<span id="codeHighlight">"&gt;</span>K<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterL<span id="codeHighlight">" onclick="</span>addLetter('L')<span id="codeHighlight">"&gt;</span>L<span id="codeHighlight">&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;/table&gt;</span>
+                  <span id="codeHighlight">&lt;/div&gt;</span>
+                <span id="codeHighlight">&lt;/div&gt;</span>
+                <span id="codeHighlight">&lt;div class="</span>flex-center<span id="codeHighlight">"&gt;</span>
+                  <span id="codeHighlight">&lt;div class="</span>flex-size-one flex-center<span id="codeHighlight">"&gt;</span>
+                    <span id="codeHighlight">&lt;table class="</span>keyboardGrid kgCharlie<span id="codeHighlight">"&gt;</span>
+                      <span id="codeHighlight">&lt;tr&gt;</span>
+                        <span id="codeHighlight">&lt;td id="</span>enter<span id="codeHighlight">" onclick="</span>enterLetters()<span id="codeHighlight">"&gt;</span>ENTER<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterZ<span id="codeHighlight">" onclick="</span>addLetter('Z')<span id="codeHighlight">"&gt;</span>Z<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterX<span id="codeHighlight">" onclick="</span>addLetter('X')<span id="codeHighlight">"&gt;</span>X<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterC<span id="codeHighlight">" onclick="</span>addLetter('C')<span id="codeHighlight">"&gt;</span>C<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterV<span id="codeHighlight">" onclick="</span>addLetter('V')<span id="codeHighlight">"&gt;</span>V<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterB<span id="codeHighlight">" onclick="</span>addLetter('B')<span id="codeHighlight">"&gt;</span>B<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterN<span id="codeHighlight">" onclick="</span>addLetter('N')<span id="codeHighlight">"&gt;</span>N<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td class="</span>letterM<span id="codeHighlight">" onclick="</span>addLetter('M')<span id="codeHighlight">"&gt;</span>M<span id="codeHighlight">&lt;/td&gt;</span>
+                        <span id="codeHighlight">&lt;td id="</span>back<span id="codeHighlight">" onclick="</span>removeLetter()<span id="codeHighlight">"&gt;</span>&#10235;<span id="codeHighlight">&lt;/td&gt;</span>
+                      <span id="codeHighlight">&lt;/tr&gt;</span>
+                    <span id="codeHighlight">&lt;/table&gt;</span>
+                  <span id="codeHighlight">&lt;/div&gt;</span>
+                <span id="codeHighlight">&lt;/div&gt;</span>
+
+                <span id="codeHighlight">&lt;a class="</span>button-large-red wide-lr-padding text-light margin-ten-t<span id="codeHighlight">" href="</span>wordleInfo.html<span id="codeHighlight">"&gt;</span>Return to Information<span id="codeHighlight">&lt;/a&gt;</span>
+              <span id="codeHighlight">&lt;/div&gt;</span>
+              <span id="codeHighlight">&lt;h2 class="</span>winCondition align-center wordleTitle<span id="codeHighlight">"&gt;&lt;/h2&gt;</span>
+
+            </code>
+          </pre>
+        </div>
+        <h3>The HTML</h3>
+        <ul class="flex-grid-row align-center">
+          <li class="flex-size-two align-left">
+            <p>Here is the HTML for my version of Wordle. It used multiple tables for both the grid and the keyboard, partnered with some fancy CSS not listed to make it look pretty. Clicking the keyboard inputted the potential letter into the current slot, and once all 5 letters were chosen pressing enter inputted the combination. The back key on the virtual keyboard removed a letter. I opted to use a virtual keyboard like this as at the time the majority of players were on a mobile device so it was intuitive and easy to use!</p>
+          </li>
+        </ul>
+
+
+        <div class="box-normal align-left back-dark text-light border-radius margin-zero margin-five-b padding-zero-b" id="codeBlock">
+          <a class="align-left margin-one-l padding-one-l sticky-top button-normal-yellow text-light" href="scriptwordle.js" download="scriptwordle.js">scriptwordle.js</a>
+          <pre class="margin-zero padding-zero">
+            <code class="text-light margin-zero padding-zero-b">
+            $(".navHamBurger").click(function() {
+              $(".navNavItem").toggleClass("navItemHamDown");
+              $(".navNavGroup").toggleClass("checkDisplay");
+              $(".navHamBurger").toggleClass("navHamBurgerDown");
+            });
+            
+            <span id="codeHighlight">function backToTop()</span> {
+              $('html').animate({ scrollTop: 0 }, 'fast');
+              document.documentElement.scrollTop = 0;
+            }
+            
+            <span id="codeHighlight">function showSources()</span> {
+              $("#sources").toggleClass("sources");
+              window.scrollTo(0,document.body.scrollHeight);
+            }
+            
+            var currentModalState = false;
+            
+            <span id="codeHighlight">function modalOpenClose(number)</span> {
+              <span id="codeHighlight">var</span> modalgroup = "#modal" + number;
+              <span id="codeHighlight">if</span> (currentModalState === false) {
+                currentModalState = true;
+                $(modalgroup).toggleClass("display-i-block");
+              } <span id="codeHighlight">else</span> {
+                currentModalState = false;
+                $(modalgroup).toggleClass("display-i-block");
+              }
+            
+            }
+            
+            
+            const dictionaryWordle = [too many words to display here! check the js :P];
+            var randomWord = dictionaryWordle[(Math.floor(Math.random() * dictionaryWordle.length))];
+            randomWord = randomWord.toUpperCase();
+            const randomWordSplit = [randomWord[0],randomWord[1],randomWord[2],randomWord[3],randomWord[4]];
+            const keyboardRows = [".kgAlpha",".kgBeta",".kgCharlie"];
+            
+            var rowIndex = 0;
+            <span id="codeHighlight">function addLetter(value,event)</span> {
+            
+              var currentTableState = $(".wordGrid");
+              var currentLetter = ".letter" + value;
+              <span id="codeHighlight">if</span> (currentTableState.find("tr").eq(rowIndex).find("td").eq(4).text() === "") {
+                var check = true;
+                var count = 0;
+                <span id="codeHighlight">while</span> (check === true) {
+                  <span id="codeHighlight">if</span> (currentTableState.find("tr").eq(rowIndex).find("td").eq(count).text() === "") {
+                    check = false;
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(count).text(value);
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(count).css({"border":"1px solid rgb(150, 150, 150)", "color":"black"});
+                  } <span id="codeHighlight">else</span> {
+                    count++
+                  }
+                }
+              }
+            }
+            
+            <span id="codeHighlight">function removeLetter()</span> {
+                var currentTableState = $(".wordGrid");
+                <span id="codeHighlight">if</span> (currentTableState.find("tr").eq(rowIndex).find("td").eq(0).text() !== "") {
+                  var check = true;
+                  var count = 4;
+                  var value = "";
+                  <span id="codeHighlight">while</span> (check === true) {
+                    <span id="codeHighlight">if</span> (currentTableState.find("tr").eq(rowIndex).find("td").eq(count).text() !== "") {
+                      check = false;
+                      currentTableState.find("tr").eq(rowIndex).find("td").eq(count).text(value);
+                      currentTableState.find("tr").eq(rowIndex).find("td").eq(count).css({"border":"1px solid rgb(230, 230, 230)", "color":"black"});
+                    } <span id="codeHighlight">else</span> {
+                      count--
+                    }
+                  }
+                }
+            }
+            
+            <span id="codeHighlight">function enterLetters()</span> {
+              var currentTableState = $(".wordGrid");
+              <span id="codeHighlight">if</span> (rowIndex !== 5 && ((currentTableState.find("tr").eq(rowIndex).find("td").eq(4).text() !== "") === true)) {
+                var winCount = 0;
+                <span id="codeHighlight">for</span> (i=0; i < 5; i++) {
+                  <span id="codeHighlight">if</span> (currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text() === randomWordSplit[i]) {
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(55, 180, 85)","color":"white"});
+                    var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+                    $(letter).css({"background-color":"rgb(55, 180, 85)","color":"white"});
+                    winCount++
+                  } <span id="codeHighlight">else if</span> (randomWordSplit.includes(currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text()) === true) {
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(250, 110, 50)","color":"white"});
+                    var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+                    var currentColor = document.querySelector(letter).style.backgroundColor;
+                    <span id="codeHighlight">if</span> (currentColor !== "rgb(55, 180, 85)") {
+                      $(letter).css({"background-color":"rgb(250, 110, 50)","color":"white"});
+                    }
+                  } <span id="codeHighlight">else</span> {
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(70, 70, 70)","color":"white"});
+                    var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+                    var currentColor = document.querySelector(letter).style.backgroundColor;
+                    <span id="codeHighlight">if</span> (currentColor !== "rgb(55, 180, 85)") {
+                      <span id="codeHighlight">if</span> (currentColor !== "rgb(250, 110, 50)") {
+                        $(letter).css({"background-color":"rgb(70, 70, 70)","color":"white"});
+                      }
+                    }
+                  }
+                }
+                <span id="codeHighlight">if</span> (winCount === 5) {
+                  winCheck(1);
+                }
+                rowIndex++
+              } <span id="codeHighlight">else if</span> (rowIndex === 5) {
+                var winCount = 0;
+                <span id="codeHighlight">for</span> (i=0; i < 5; i++) {
+                  <span id="codeHighlight">if</span> (currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text() === randomWordSplit[i]) {
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(55, 180, 85)","color":"white"});
+                    var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+                    $(letter).css({"background-color":"rgb(55, 180, 85)","color":"white"});
+                    winCount++
+                  } <span id="codeHighlight">else if</span> (randomWordSplit.includes(currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text()) === true) {
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(250, 110, 50)","color":"white"});
+                    var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+                    var currentColor = document.querySelector(letter).style.backgroundColor;
+                    <span id="codeHighlight">if</span> (currentColor !== "rgb(55, 180, 85)") {
+                      $(letter).css({"background-color":"rgb(250, 110, 50)","color":"white"});
+                    }
+                  } <span id="codeHighlight">else</span> {
+                    currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(70, 70, 70)","color":"white"});
+                    var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+                    var currentColor = document.querySelector(letter).style.backgroundColor;
+                    <span id="codeHighlight">if</span> (currentColor !== "rgb(55, 180, 85)") {
+                      <span id="codeHighlight">if</span> (currentColor !== "rgb(250, 110, 50)") {
+                        $(letter).css({"background-color":"rgb(70, 70, 70)","color":"white"});
+                      }
+                    }
+                  }
+                }
+                <span id="codeHighlight">if</span> (winCount === 5) {
+                  winCheck(1);
+                } <span id="codeHighlight">else</span> {
+                  winCheck(0);
+                }
+              }
+            }
+            
+            <span id="codeHighlight">function winCheck(value)</span> {
+              <span id="codeHighlight">if</span> (value === 1) {
+                $("#keyboardBox").toggleClass("display-hide");
+                $(".winCondition").text("Congratulations! You won! The word was " + randomWord + ".");
+                $("#restartButton").toggleClass("display-hide");
+              } <span id="codeHighlight">else</span> {
+                $("#keyboardBox").toggleClass("display-hide");
+                $(".winCondition").text("Sorry, you lost! Better luck next time. The word was " + randomWord + ".");
+                $("#restartButton").toggleClass("display-hide");
+              }
+            }
+            </code>
+          </pre>
+        </div>
+        <h3>The JavaScript</h3>
+        <ul class="flex-grid-row align-center">
+          <li class="flex-size-two align-left">
+            <p>Here is where the magic happens! the function addLetter finds the current state of the board, changes the screen to shown the inputted letters. The removeLetter function does the opposite. Once the user presses enter, the enterLetters function will run and it will do a check to initially see if 5 letters are chosen.</p><p>For every letter, it checks to see if its in the word, and its position. It then changes the colour of the letters accordingly to indicate whether it was correct, partially correct or wrong. This function is ran every time a word is inputted.</p><p>If all 5 are correct, it will run the winCheck function, which will show the congratulations screen and toggles the restart button to be shown. If all 6 guesses are entered and its wrong on the 6th guess, wincheck will be 0 and it will display losing text and again, shows the restart button.</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="box-normal margin-five-l margin-five-r align-center">
+      <h3 class="align-center margin-five-l margin-five-r text-light">Thank you for reading!</h3>
+      <ul class="flex-grid-row back-dark text-light align-center"> 
+        <li class="flex-size-two align-left">
+          <p class="">Thank you very much for reading through this small project I made. Here is the link to the game itself to play, and all code is open-source and free to use. This was a fun project i worked on during 2022 and was enjoyable at the time. Despite the sadness of COVID-19, I still found motivation to do what i love!</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box-normal align-center">
+      <a class="button-large-red wide-lr-padding text-light margin-five-t flex-center" href="wordle.html">Play Wordle!</a>
+    </div>
+
+    <div class="footerContainer">
+      <hr class="back-light">
+      <div class="footerItems">
+        <p class="text-light textButton" onclick="showSources()">Sources</p>
+        <p class="text-light textButton" onclick="backToTop()">Back to Top</p>
+      </div>
+      <div id="sources" class="align-left sources">
+        <a class="textButton text-light " href="https://api.jquery.com/">jQuery</a>
+        <p></p>
+        <a class="text-light textButton padding-five-b" href="https://getbootstrap.com/">Bootstrap</a>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scriptwordle.js"></script>
+  </body>
+
+</html>

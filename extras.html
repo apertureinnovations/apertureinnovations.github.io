@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Aperture Innovations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleextras.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navNavbar">
+      <div class="navNavGroup checkDisplay">
+        <a class="navNavItem" href="index.html">Home</a>
+        <a class="navNavItem" href="skills.html">Skills</a>
+        <a class="navNavItem" href="about.html">About</a>
+      </div>
+
+      <a class="navNavItem navActive" href="extras.html">Projects</a>
+
+      <a class="navHide navHamBurger"><i class="fa fa-bars"></i></a>
+    </div>
+
+
+
+    <div class="box-normal">
+      <div class="carouselContainer" style="min-width: 100%;">
+        <div class="carouselItem fadePartial">
+          <img src="wordlebg.png" alt="" style="width:100%">
+          <div class="carouselCenterText">
+            <a href="wordleInfo.html" class="text-light">Wordle Project</a>
+          </div>
+        </div>
+  
+        <a class="carouselLeftButton" onclick="changeCurrentImage(-1)">&#10094;</a>
+        <a class="carouselRightButton" onclick="changeCurrentImage(1)">&#10095;</a>
+      </div>
+    </div>
+
+
+
+
+    <div class="footerContainer">
+      <hr class="back-dark">
+      <div class="footerItems">
+        <p class="textButton" onclick="showSources()">Sources</p>
+        <p class="textButton" onclick="backToTop()">Back to Top</p>
+      </div>
+      <div id="sources" class="align-left sources">
+        <a class="textButton" href="https://api.jquery.com/">jQuery</a>
+        <p></p>
+        <a class="textButton padding-five-b" href="https://getbootstrap.com/">Bootstrap</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    </body>
+
+    </html>
