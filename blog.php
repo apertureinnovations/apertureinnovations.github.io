@@ -19,11 +19,23 @@ class CommentSection {
     function addComment($commentData) {
         $this->commentsection[] = $commentData;
     }
+
+    function uploadComment($commentsection) {
+        file_put_contents("comments.json",json_encode($commentsection));
+
+    }
 }
 
 $data = new CommentSection();
 $data->initFile();
-
+if(isset($_POST['commentSubmit'])){
+    $uData = $_POST['name']; 
+    $cData = $_POST['commentData'];
+}   $arr = array($uData,$cData);
+    $data->addComment($arr);
+    if ($uData != null && $cData != null) {
+        $data->uploadComment($data->commentsection);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -58,16 +70,24 @@ $data->initFile();
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil esse facilis labore ipsum quae aliquam ea fuga! Accusamus ipsa vel incidunt, ratione voluptatem minima, pariatur numquam necessitatibus culpa veniam eius!</p>
     </div>
 
-
+    <form class="box-normal-flattop back-transparent" action="" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input required pattern=".*\S+.*" type="text" class="form-control" id="username" name="name" placeholder="Enter Name">
+            <label for="comment">Comment</label>
+            <input required pattern=".*\S+.*" type="text" class="form-control" id="comment" name="commentData" placeholder="What do YOU think about this topic?">
+        </div>
+        <button type="submit" class="btn btn-primary" name="commentSubmit">Submit</button>
+    </form>
 
     <!-- COMMENT SECTION -->
-    <div id="comments" class="box-normal-flattop back-transparent">
+    <div id="commentsBox" class="box-normal-flattop back-transparent">
 
       <script>
         const comments = <?= json_encode($data->readComment()) ?>;
 
         comments.forEach(comment => {
-            document.getElementById("comments").innerHTML += `
+            document.getElementById("commentsBox").innerHTML += `
                 <div class="box-normal sideBorder margin-five">
                     <p>${comment.comment}<br><br><span class="font-semibold">${comment.username}</span></p>
                 </div>
