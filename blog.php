@@ -4,12 +4,13 @@
 class CommentSection {
     public $commentsection = [];
 
-    function construct($commentsection){
-        $this->commentsection = $commentsection;
-    }
-
     function initFile() {
         $this->commentsection = json_decode(file_get_contents("comments.json"), true);
+        $this->removeDuplicates();
+    }
+
+    function removeDuplicates() {
+      $this->commentsection = array_values( array_unique( $this->commentsection , SORT_REGULAR ) );
     }
 
     function readComment() {
@@ -20,9 +21,14 @@ class CommentSection {
         $this->commentsection[] = $commentData;
     }
 
-    function uploadComment($commentsection) {
-        file_put_contents("comments.json",json_encode($commentsection));
+    function uploadComment() {
+        $this->removeDuplicates();
+        file_put_contents("comments.json",json_encode($this->commentsection));
+    }
 
+    function copyToLog($uData,$cData,$senderIP,$time) {
+      $userData = ["username" => $uData,"comment" => $cData,"address" => $senderIP, "timestamp" => $time];
+      file_put_contents("data.log", json_encode($userData), FILE_APPEND | LOCK_EX);
     }
 }
 
@@ -31,11 +37,17 @@ $data->initFile();
 if(isset($_POST['commentSubmit'])){
     $uData = $_POST['name']; 
     $cData = $_POST['commentData'];
-}   $arr = array($uData,$cData);
-    $data->addComment($arr);
+    $arr = ["username" => $uData,"comment" => $cData];
     if ($uData != null && $cData != null) {
-        $data->uploadComment($data->commentsection);
+        $data->addComment($arr);
+        $data->uploadComment();
+        $senderIP = $_SERVER['REMOTE_ADDR'];
+        $dateTimeSent = time();
+        $data->copyToLog($uData,$cData,$senderIP,$dateTimeSent);
+        $uData = null;
+        $cData = null;
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -63,14 +75,20 @@ if(isset($_POST['commentSubmit'])){
         <a class="navNavItem" href="contact.html">Contact</a>
         <a class="navNavItem " href="extras.html">Projects</a>
       </div>
-      <a class="navNavItem navActive" href="blog.html">Blog</a>
+      <a class="navNavItem navActive" href="blog.php">Blog</a>
       <a class="navHide navHamBurger"><i class="fa fa-bars"></i></a>
     </div>
     <div class="box-normal-flattop back-transparent">
+      <h1>Blog!</h1>
+      <h2>Header:</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil esse facilis labore ipsum quae aliquam ea fuga! Accusamus ipsa vel incidunt, ratione voluptatem minima, pariatur numquam necessitatibus culpa veniam eius!</p>
-    </div>
-
-    <form class="box-normal-flattop back-transparent" action="" method="post">
+      <h2>Header:</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil esse facilis labore ipsum quae aliquam ea fuga! Accusamus ipsa vel incidunt, ratione voluptatem minima, pariatur numquam necessitatibus culpa veniam eius!</p>
+      <h2>Header:</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil esse facilis labore ipsum quae aliquam ea fuga! Accusamus ipsa vel incidunt, ratione voluptatem minima, pariatur numquam necessitatibus culpa veniam eius!</p>
+    
+      <h3>Have an Opinion about this article? Talk about it below!</h3>
+      <form action="" method="post">
         <div class="form-group">
             <label for="username">Username</label>
             <input required pattern=".*\S+.*" type="text" class="form-control" id="username" name="name" placeholder="Enter Name">
@@ -78,24 +96,26 @@ if(isset($_POST['commentSubmit'])){
             <input required pattern=".*\S+.*" type="text" class="form-control" id="comment" name="commentData" placeholder="What do YOU think about this topic?">
         </div>
         <button type="submit" class="btn btn-primary" name="commentSubmit">Submit</button>
-    </form>
+      </form>
+      <h3>Comments:</h3>
+    </div>
 
     <!-- COMMENT SECTION -->
     <div id="commentsBox" class="box-normal-flattop back-transparent">
-
-      <script>
-        const comments = <?= json_encode($data->readComment()) ?>;
-
-        comments.forEach(comment => {
-            document.getElementById("commentsBox").innerHTML += `
-                <div class="box-normal sideBorder margin-five">
-                    <p>${comment.comment}<br><br><span class="font-semibold">${comment.username}</span></p>
-                </div>
-            `;
-        });
-      </script>
-
     </div>
+
+    <script>
+      const comments = <?= json_encode($data->readComment()) ?>;
+      comments.reverse().forEach(comment => {
+        if (comment.comment != undefined && comment.username != undefined) {
+        document.getElementById("commentsBox").innerHTML += `
+            <div class="box-normal sideBorder margin-one">
+              <p>${comment.comment}<br><br><span class="font-semibold">${comment.username}</span></p>
+            </div>
+            `;
+          }
+        });
+    </script>
 
     <!-- FOOTER -->
     <div class="footerContainer">
