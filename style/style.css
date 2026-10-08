@@ -20,6 +20,9 @@
 .align-left {
   text-align: left;
 }
+.text-auto {
+  text-size-adjust: auto !important;
+}
 
 /* -------------------------------------------- */
 
@@ -159,7 +162,7 @@
 .box-normal-flattop {
   padding: 1%;
   background: inherit;
-  border: 0.1em solid inherit;
+  border: 0.5cqw solid inherit;
   border-radius: 1%;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -168,13 +171,13 @@
 .box-normal {
   padding: 1%;
   background: inherit;
-  border: 0.1em solid inherit;
+  border: 0.5cqw solid inherit;
   border-radius: 1%;
   position: relative;
 }
 .box-small {
   padding: 1%;
-  border: 0.1em solid inherit;
+  border: 0.5cqw solid inherit;
   border-radius: 1%;
   position: relative;
 }
@@ -202,16 +205,16 @@
 }
 .box-form {
   position: relative;
-  border: 0.1em;
-  padding: 0.4em;
+  border: 0.5cqw;
+  padding: 0.4cqw;
   display: block;
   overflow:auto;
 }
 .item-form {
-  border: 0.1em solid rgba(20,20,20,1);
-  border-radius: 0.3em;
-  margin: 0.5em;
-  padding: 0.4em;
+  border: 0.5cqw solid rgba(20,20,20,1);
+  border-radius: 0.3cqw;
+  margin: 0.5cqw;
+  padding: 0.4cqw;
 }
 .item-form:hover {
   box-shadow: 0 0 2px;
@@ -291,22 +294,22 @@
 }
 
 .flex-size-one {
-  flex: 1 1 100px;
+  flex: 1 1 0px;
 }
 .flex-size-two {
-  flex: 2 1 200px;
+  flex: 2 1 0px;
 }
 .flex-size-three {
-  flex: 3 1 300px;
+  flex: 3 1 0px;
 }
 .flex-size-four {
-  flex: 4 1 400px;
+  flex: 4 1 0px;
 }
 .flex-size-five {
-  flex: 5 1 500px;
+  flex: 5 1 0px;
 }
 .flex-size-six {
-  flex: 6 1 600px;
+  flex: 6 1 0px;
 }
 
 /* -------------------------------------------- */
@@ -319,6 +322,7 @@
 .img-fluidic {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 .img-thumb {
   border: 1px solid #ddd;
@@ -435,33 +439,33 @@
   color: #7A1CAC !important;
 }
 .border-blue {
-  border: 0.1em solid rgba(40,110,215,1) !important;
+  border: 0.5cqw solid rgba(40,110,215,1) !important;
 }
 .border-red {
-  border: 0.1em solid rgba(210,45,45,1) !important;
+  border: 0.5cqw solid rgba(210,45,45,1) !important;
 }
 .border-green {
-  border: 0.1em solid rgba(55,180,85,1) !important;
+  border: 0.5cqw solid rgba(55,180,85,1) !important;
 }
 .border-dark {
-  border: 0.1em solid rgba(20,20,20,1) !important;
+  border: 0.5cqw solid rgba(20,20,20,1) !important;
 }
 .border-light {
-  border: 0.1em solid rgba(247,247,247,1) !important;
+  border: 0.5cqw solid rgba(247,247,247,1) !important;
 }
 .border-noradius {
   border-radius: 0 !important;
 }
 .border-radius {
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
 }
 
-.border-radius-extreme {
+.border-radius-extcqwe {
   border-radius: 10%;
 }
 
 .border-notop-radius {
-  border-radius: 0 0 0.25em 0.25em;
+  border-radius: 0 0 0.25cqw 0.25cqw;
 }
 /* -------------------------------------------- */
 
@@ -484,11 +488,11 @@
 
 .button-large-blue {
   display: inline-block;
-  padding: 0.15em 0.3em;
-  font-size: 1.5em;
+  padding: 0.15cqw 0.3cqw;
+  font-size: 1.5cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(40,110,215,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(40,110,215,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(40,110,215,1);
   text-align: center;
@@ -503,11 +507,11 @@
 
 .button-large-red {
   display: inline-block;
-  padding: 0.15em 0.3em;
-  font-size: 1.5em;
+  padding: 0.15cqw 0.3cqw;
+  font-size: 1.5cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(210,45,45,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(210,45,45,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(210,45,45,1);
   text-align: center;
@@ -523,11 +527,11 @@
 
 .button-large-green {
   display: inline-block;
-  padding: 0.15em 0.3em;
-  font-size: 1.5em;
+  padding: 0.15cqw 0.3cqw;
+  font-size: 1.5cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(55,180,85,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(55,180,85,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(55,180,85,1);
   text-align: center;
@@ -544,11 +548,11 @@
 
 .button-normal-blue {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(40,110,215,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(40,110,215,1);
+  border-radius: 1cqw;
   text-decoration: none;
   background: rgba(40,110,215,1);
   text-align: center;
@@ -566,11 +570,11 @@
 }
 .button-normal-red {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(210,45,45,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(210,45,45,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(210,45,45,1);
   text-align: center;
@@ -588,11 +592,11 @@
 }
 .button-normal-green {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(55,180,85,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(55,180,85,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(55,180,85,1);
   text-align: center;
@@ -610,15 +614,16 @@
 }
 .button-normal-black {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgb(0, 0, 0);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgb(0, 0, 0);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgb(0, 0, 0);
   text-align: center;
   outline: none;
+  text-size-adjust: 100%;
 }
 
 .button-normal-black:hover {
@@ -632,11 +637,11 @@
 }
 .button-normal-yellow {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(55,180,85,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(55,180,85,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgb(200, 195, 5);
   text-align: center;
@@ -654,11 +659,11 @@
 }
 .button-normal-purple {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid #7A1CAC;
-  border-radius: 0.25em;
+  border: 0.5cqw solid #7A1CAC;
+  border-radius: 0.25rem;
   text-decoration: none;
   background: #7A1CAC;
   text-align: center;
@@ -667,22 +672,22 @@
 
 .button-normal-purple:hover {
   background: #42125c;
-  border: 0.1em solid #42125c;
+  border: 0.5cqw solid #42125c;
   text-decoration: none;
 }
 
 .button-normal-purple:active {
   background: #7A1CAC;
-  border: 0.1em solid #7A1CAC;
+  border: 0.5cqw solid #7A1CAC;
   text-decoration: none;
 }
 .button-large-purple {
   display: inline-block;
-  padding: 0.15em 0.3em;
-  font-size: 1.5em;
+  padding: 0.15cqw 0.3cqw;
+  font-size: 1.5cqw;
   cursor:pointer;
-  border: 0.1em solid #7A1CAC;
-  border-radius: 0.25em;
+  border: 0.5cqw solid #7A1CAC;
+  border-radius: 0.25rem;
   text-decoration: none;
   background: #7A1CAC;
   text-align: center;
@@ -690,22 +695,22 @@
 }
 .button-large-purple:hover {
   background: #42125c;
-  border: 0.1em solid #42125c;
+  border: 0.5cqw solid #42125c;
   text-decoration: none;
 }
 
 .button-large-purple:active {
   background: #7A1CAC;
-  border: 0.1em solid #7A1CAC;
+  border: 0.5cqw solid #7A1CAC;
   text-decoration: none;
 }
 .button-outline-blue {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border:0.1em solid rgba(40,110,215,1);
-  border-radius: 0.25em;
+  border:0.1cqw solid rgba(40,110,215,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(247,247,247,1);
   text-align: center;
@@ -722,11 +727,11 @@
 
 .button-outline-red {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(210,45,45,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(210,45,45,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(247,247,247,1);
   text-align: center;
@@ -742,11 +747,11 @@
 }
 .button-outline-green {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(55,180,85,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(55,180,85,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(247,247,247,1);
   text-align: center;
@@ -762,11 +767,11 @@
 }
 .button-outline-dark {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  font-size: 1em;
+  padding: 0.3cqw 0.8cqw;
+  font-size: 1cqw;
   cursor:pointer;
-  border: 0.1em solid rgba(20,20,20,1);
-  border-radius: 0.25em;
+  border: 0.5cqw solid rgba(20,20,20,1);
+  border-radius: 0.25rem;
   text-decoration: none;
   background: rgba(247,247,247,1);
   text-align: center;
@@ -788,7 +793,7 @@
   margin: 15% auto;
   padding: 2%;
   width:70% !important;
-  border: 0.1em solid rgba(20,20,20,1);
+  border: 0.5cqw solid rgba(20,20,20,1);
   border-radius: 5%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),0 4px 6px 0 rgba(0, 0, 0, 0.18);
 }
@@ -801,7 +806,7 @@
 .close {
   color: rgba(20,20,20,1);
   float: right;
-  font-size: 1em;
+  font-size: 1cqw;
   font-weight: bold;
   position: absolute;
   right: 1%;
@@ -876,8 +881,8 @@
   display: inline-block;
 }
 .wide-lr-padding {
-  padding-left: 4em;
-  padding-right: 4em;
+  padding-left: 4cqw;
+  padding-right: 4cqw;
 }
 
 /* -------------------------------------------- */
@@ -911,34 +916,43 @@
   font-style: normal;
 }
 .font-xxs {
-  font-size: 1em;
+  font-size: clamp(0.75rem, min(1cqw, 1vh), 1rem);
 }
+
 .font-xs {
-  font-size: 1.5em;
+  font-size: clamp(0.9rem, min(1.5cqw, 1.5vh), 1.5rem);
 }
+
 .font-s {
-  font-size: 2em;
+  font-size: clamp(1rem, min(2cqw, 2vh), 2rem);
 }
+
 .font-m {
-  font-size: 2.5em;
+  font-size: clamp(1.25rem, min(3cqw, 3vh), 2.5rem);
 }
+
 .font-ml {
-  font-size: 4em;
+  font-size: clamp(1.5rem, min(4cqw, 4vh), 4rem);
 }
+
 .font-l {
-  font-size: 5em;
+  font-size: clamp(2rem, min(5cqw, 5vh), 5rem);
 }
+
 .font-xl {
-  font-size: 7.5em;
+  font-size: clamp(3rem, min(10cqw, 10vh), 7.5rem);
 }
+
 .font-xxl {
-  font-size: 10em;
+  font-size: clamp(4rem, min(20cqw, 20vh), 10rem);
 }
+
 .font-xxxl {
-  font-size: 20em;
+  font-size: clamp(5rem, min(30cqw, 30vh), 20rem);
 }
+
 .font-plusxl {
-  font-size: 30em;
+  font-size: clamp(6rem, min(40cqw, 40vh), 30rem);
 }
 /* -------------------------------------------- */
 
@@ -1166,12 +1180,12 @@
 }
 
 .text-shadow-purple {
-  translate: 1rem -3rem;
-  font-size: 37rem;
+  translate: 1cqw -3cqw;
+  font-size: 37cqw;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-weight: 600;
   color:rgb(122,28,172) !important;
-  text-shadow: 1rem 1rem rgb(102,08,152);
+  text-shadow: 1cqw 1cqw rgb(102,08,152);
   text-transform: uppercase;
 }
 
@@ -1276,3 +1290,22 @@
   border-radius: 4px 0 0 4px;
 }
 
+p {
+  font-size: 2cqw;
+}
+
+h1 {
+  font-size: 10cqw;
+}
+
+h2 {
+  font-size: 8cqw;
+}
+
+h3 {
+  font-size: 6cqw;
+}
+
+h4 {
+  font-size: 4cqw;
+}

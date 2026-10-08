@@ -26,23 +26,24 @@
     </div>
 
     <div class="flex-grid-row back-lightblue text-black margin-zero">
-      <div class="flex-size-one padding-five">
-        <h1 class="font-ml">Hi.<br>I'm Lily Palmer.<br>Welcome to my Portfolio.</h1>
-        <p class="font-xs">I'm a Software Developer with over 5 years of experience in developing and delivering easy to use software. My goal is to create efficient, scalable, and user-friendly applications that solve real-world problems on a global scale.</p>
-        <a class="button-normal-black text-light font-xxs font-semibold" id="rounded" onclick="scrollToElement('#moreInfo')">Learn More</a>
+      <div style="height: fit-content !important;" class="flex-size-five padding-five">
+        <h1 class="text-auto font-l">Hi.<br>I'm Lily Palmer.<br>Welcome to my Portfolio.</h1>
+        <p class="text-auto font-m">I'm a Software Developer with over a decade of experience in developing and delivering easy to use software. My goal is to create efficient, scalable, and user-friendly applications that solve real-world problems on a global scale.</p>
+        <a class="button-normal-black text-light font-xs font-semibold" id="rounded" onclick="scrollToElement('#moreInfo')">Learn More</a>
       </div>
-      <div class="flex-size-one padding-five">
-        <div class="back-light border-radius" style="min-height: 100%;">
-        </div>
+
+
+      <div class="flex-size-five padding-five">
+        <img style="justify-content: right; width: min(100%, 40vh);" class="img-fluidic" src="data/lily.jpg" alt="">
       </div>
 
     </div>
 
     <div class="box-normal padding-five" id="moreInfo">
       <h1 class="font-m align-center margin-five-t">Skills &amp; Achievements</h1>
-      <p class="font-xs margin-five">The following is a detailed breakdown of my proficiency across the various programming languages I have learned. The accompanying pie chart visually represents my relative expertise in each language, offering a comparative overview of my skill set. I've assigned them a value of 1-100 relative to current proficiency. These numbers are expected to increase over time.</p>
+      <p class="font-s margin-five">The following is a detailed breakdown of my proficiency across the various programming languages I have learned. The accompanying pie chart visually represents my relative expertise in each language, offering a comparative overview of my skill set. I've assigned them a value of 1-100 relative to current proficiency. These numbers are expected to increase over time.</p>
 
-      <p class="font-xs font-bold align-center border-radius"><span class="sideBorder" style="border-color: #F0DB4F !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> JavaScript <span class="sideBorder" style="border-color: #5382a1 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Java <span class="sideBorder" style="border-color: #646464 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Python <span class="sideBorder" style="border-color: #453a62 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Haskell <span class="sideBorder" style="border-color: #286ed7 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> CSS / HTML <span class="sideBorder" style="border-color: #682876 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> C#</p>
+      <p class="font-s font-bold align-center border-radius"><span class="sideBorder" style="border-color: #F0DB4F !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> JavaScript <span class="sideBorder" style="border-color: #5382a1 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Java <span class="sideBorder" style="border-color: #646464 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Python <span class="sideBorder" style="border-color: #453a62 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> Haskell <span class="sideBorder" style="border-color: #286ed7 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> CSS / HTML <span class="sideBorder" style="border-color: #682876 !important;margin-right: 0.25rem;border-width: 0.3rem !important;;"></span> C#</p>
       <div class="box-normal flex-center">
         <canvas id="chartValues" style="width:100%;max-width: 50rem;">
         </canvas>

@@ -32,13 +32,7 @@ final class CommentSection {
     }
 
     function validation($data) {
-      $string = "";
-      foreach($data as $char) {
-        switch ($char) {
-          default: 
-            $string += $char;
-        }
-      }
+      return htmlspecialchars($data, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     }
 }
 
@@ -47,7 +41,9 @@ $data->initFile();
 if(isset($_POST['commentSubmit'])){
     $uData = $_POST['name']; 
     $cData = $_POST['commentData'];
-    $arr = ["username" => $uData,"comment" => $cData];
+    $name = $data->validation($uData);
+    $comment = $data->validation($cData);
+    $arr = ["username" => $name,"comment" => $comment];
     if ($uData != null && $cData != null) {
         $data->addComment($arr);
         $data->uploadComment();
@@ -105,7 +101,7 @@ if(isset($_POST['commentSubmit'])){
             <label for="comment">Comment</label>
             <input required pattern=".*\S+.*" type="text" class="form-control" id="comment" name="commentData" placeholder="What do YOU think about this topic?">
         </div>
-        <button type="submit" class="button-normal-purple text-white" name="commentSubmit">Submit</button>
+        <button type="submit" class="button-normal-purple text-white font-s" name="commentSubmit">Submit</button>
       </form>
       <h3>Comments:</h3>
     </div>
