@@ -1,11 +1,11 @@
 <?php
 
 
-class CommentSection {
-    public $commentsection = [];
+final class CommentSection {
+    protected $commentsection = [];
 
     function initFile() {
-        $this->commentsection = json_decode(file_get_contents("comments.json"), true);
+        $this->commentsection = json_decode(file_get_contents("data/comments.json"), true);
         $this->removeDuplicates();
     }
 
@@ -28,7 +28,17 @@ class CommentSection {
 
     function copyToLog($uData,$cData,$senderIP,$time) {
       $userData = ["username" => $uData,"comment" => $cData,"address" => $senderIP, "timestamp" => $time];
-      file_put_contents("data.log", json_encode($userData), FILE_APPEND | LOCK_EX);
+      file_put_contents("data/data.log", json_encode($userData), FILE_APPEND | LOCK_EX);
+    }
+
+    function validation($data) {
+      $string = "";
+      foreach($data as $char) {
+        switch ($char) {
+          default: 
+            $string += $char;
+        }
+      }
     }
 }
 
@@ -56,7 +66,7 @@ if(isset($_POST['commentSubmit'])){
   <head>
     <meta charset="utf-8">
     <title>Aperture Unlimited</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -95,7 +105,7 @@ if(isset($_POST['commentSubmit'])){
             <label for="comment">Comment</label>
             <input required pattern=".*\S+.*" type="text" class="form-control" id="comment" name="commentData" placeholder="What do YOU think about this topic?">
         </div>
-        <button type="submit" class="btn btn-primary" name="commentSubmit">Submit</button>
+        <button type="submit" class="button-normal-purple text-white" name="commentSubmit">Submit</button>
       </form>
       <h3>Comments:</h3>
     </div>
@@ -134,7 +144,7 @@ if(isset($_POST['commentSubmit'])){
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 
 </html>
